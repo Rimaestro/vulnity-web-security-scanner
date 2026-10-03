@@ -13,17 +13,10 @@ From this directory:
 
     python -m venv .venv
 
-Activate the environment, install dependencies, and copy the development settings:
-
-    # Windows PowerShell
-    .venv\Scripts\Activate.ps1
-    Copy-Item .env.example .env
-
-    # macOS/Linux
-    # source .venv/bin/activate
-    # cp .env.example .env
+Activate the environment with the command for your shell: .venv\Scripts\Activate.ps1 in Windows PowerShell or source .venv/bin/activate on macOS/Linux. Then install dependencies and copy the development settings:
 
     pip install -r requirements.txt
+    cp .env.example .env
     uvicorn app.main:app --reload
 
 The API defaults to SQLite. With DEBUG enabled, interactive API documentation is available at http://127.0.0.1:8000/docs.

@@ -39,15 +39,9 @@ cd vulnity-web-security-scanner/backend
 python -m venv .venv
 ```
 
-Activate the virtual environment, then install and configure the backend:
+Activate the virtual environment with the command for your shell: .venv\Scripts\Activate.ps1 in Windows PowerShell or source .venv/bin/activate on macOS/Linux. Then install and configure the backend:
 
 ```bash
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-
-# macOS/Linux
-# source .venv/bin/activate
-
 pip install -r requirements.txt
 cp .env.example .env
 uvicorn app.main:app --reload
@@ -62,7 +56,7 @@ The API listens on `http://127.0.0.1:8000`. When debug mode is enabled, the Open
 In a second terminal:
 
 ```bash
-cd ../frontend
+cd frontend
 npm install
 npm run dev
 ```
